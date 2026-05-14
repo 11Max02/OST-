@@ -6,9 +6,16 @@ body {
   display: flex;
 }
 
+p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
 .sidebar {
   width: 80px;
   background: #111;
+  border-radius: 50px;
   display: flex;
   margin-left: 100px;
   margin-top: 100px;
