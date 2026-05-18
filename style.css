@@ -23,7 +23,7 @@ p {
   box-shadow: 0 0 10px #0ff;
   display: flex;
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 150px;
   flex-direction: column;
   align-items: center;
   padding-top: 40px; /* more top padding */
@@ -52,6 +52,7 @@ p {
   flex: 1;
   text-align: center;
   padding: 50px;
+  margin-top: 100px;
 }
 
 .profile img {
