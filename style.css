@@ -44,3 +44,15 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.profile {
+    margin-left: 700px;
+}
+.profile img{
+    width: 180px;
+    height: 180px;
+    margin-top: 75%;
+    border-radius: 50%;
+    border: 4px solid #1a2c5a;
+    box-shadow: 0 0 20px #0ff;
+
+}
