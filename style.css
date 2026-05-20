@@ -7,15 +7,32 @@
 
 body {
     height: 100vh;
-    background: url("bg.jpg") no-repeat center / cover;
+    background-color: #0b0e14; 
+    background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     padding: 50px 5%;
 }
 
 .container {
     position: relative;
     height: 100%;
-    background: blue;
+    background-color: #0b0e14; 
+    background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     border-radius: 30px; 
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+}
+
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
 }
 
 header {
@@ -24,7 +41,6 @@ header {
     left: 0;
     width: 100%;
     padding: 25px 5%;
-    background: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +64,46 @@ header {
     transition: .5s;
 }
 
-.navbar a:hover {
+.navbar a:hover, 
+.navbar a.active{
     border-color: #fff;
+}
 
+.home {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0;
+    color: #fff;
+}
+
+.home-details h1 {
+    font-size: 55px;
+    line-height: 1;
+}
+
+.home-details h2 {
+    font-size: 32px;
+}
+
+.home-details p {
+    margin: 10px 0 20px;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff;
+    overflow: hidden;
+}
+
+.home-img .img-box img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
