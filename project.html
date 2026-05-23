@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACAS | Personal Website</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+   <div class="container">
+    <header>
+        <a href="" class="logo">MR</a>
+        <nav class="navbar">
+            <a href="index.html" >Home</a>
+            <a href="about.html" >About</a>
+            <a href="project.html" class="active">Project</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+    <section class="project">
+        <div class="slideshow">
+    <div class="card" onclick="openModal('', 'This is the first project description.')">
+      <h3>Project One</h3>
+    </div>
+    <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">
+      <h3>Project Two</h3>
+    </div>
+    <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">
+      <h3>Project Three</h3>
+    </div>
+    <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">
+      <h3>Project Four</h3>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+    </section>
+   </div>
+</body>
+</html>

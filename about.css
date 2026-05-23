@@ -68,3 +68,28 @@ header {
 .navbar a.active{
     border-color: #fff;
 }
+
+.about {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0;
+    color: #fff;
+}
+.about-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid #fff;
+    border-radius: 5%;
+    box-shadow: 0 0 20px #fff;
+    overflow: hidden;
+}
+
+.about-img .img-box img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
