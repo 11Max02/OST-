@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinite Carousel Project</title>
   <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body {
-    height: 100vh;
-    background-color: #0b0e14; 
-    background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    padding: 50px 5%;
-}
-
-.container {
-    position: relative;
-    height: 100%;
-    background-color: #0b0e14; 
-    background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    border-radius: 30px; 
-    backdrop-filter: blur(30px);
-    transform: scale(0);
-    animation: zoom-in 1s ease forwards;
-}
-
-@keyframes zoom-in {
-    100% {
-        transform: scale(1);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
-}
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
+    body {
+      height: 100vh;
+      background-color: #0b0e14;
+      background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      padding: 50px 5%;
+    }
 
-.logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
+    .container {
+      position: relative;
+      height: 100%;
+      background-color: #0b0e14;
+      background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      border-radius: 30px;
+      backdrop-filter: blur(30px);
+      transform: scale(0);
+      animation: zoom-in 1s ease forwards;
+    }
 
-.navbar a {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    border-bottom: 2px solid transparent;
-    transition: .5s;
-}
+    @keyframes zoom-in {
+      100% {
+        transform: scale(1);
+      }
+    }
 
-.navbar a:hover, 
-.navbar a.active{
-    border-color: #fff;
-}
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar a {
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 35px;
+      border-bottom: 2px solid transparent;
+      transition: .5s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      border-color: #fff;
+    }
 
     .project {
       margin: 40px auto;
@@ -97,7 +98,7 @@ header {
       margin: 0 10px;
       background: #eee;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -115,6 +116,7 @@ header {
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
@@ -134,7 +136,7 @@ header {
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.6);
       justify-content: center;
       align-items: center;
     }
@@ -154,6 +156,7 @@ header {
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -169,16 +172,38 @@ header {
     <section class="project">
       <div class="slideshow" id="carousel">
         <!-- Original cards -->
-        <div class="card" onclick="openModal('Project One', 'This is the first project description.')">Project One</div>
-        <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">Project Two</div>
-        <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">Project Three</div>
-        <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">Project Four</div>
+
+        <div class="card"
+          onclick="openModal('Catch the Ball', 'This game was simple you need to move the bar using arrow left and right to catch the ball', 'images/catch-ball.png')">
+          <img src="images/catch-ball.png" alt="Catch the Ball"
+            style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+        </div>
+
+        <div class="card"
+          onclick="openModal('Project Two', 'This is the second project description.', 'images/project2.png')">
+          <img src="images/project2.png" alt="Project Two"
+            style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+        </div>
+
+        <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">Project Two
+        </div>
+        <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">Project Three
+        </div>
+        <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">Project Four
+        </div>
 
         <!-- Duplicate cards for seamless loop -->
-        <div class="card" onclick="openModal('Project One', 'This is the first project description.')">Project One</div>
-        <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">Project Two</div>
-        <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">Project Three</div>
-        <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">Project Four</div>
+        <div class="card"
+          onclick="openModal('Catch the Ball', 'This game was simple you need to move the bar using arrow left and right to catch the ball', 'images/catch-ball.png')">
+          <img src="images/catch-ball.png" alt="Catch the Ball"
+            style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+        </div>
+        <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">Project Two
+        </div>
+        <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">Project Three
+        </div>
+        <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">Project Four
+        </div>
       </div>
     </section>
 
@@ -187,9 +212,11 @@ header {
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" style="width:100%; border-radius:8px; margin:15px 0;">
         <p id="modal-description"></p>
       </div>
     </div>
+
   </div>
 
   <script>
@@ -205,12 +232,21 @@ header {
     }
 
     // Close modal when clicking outside
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       const modal = document.getElementById("modal");
       if (event.target === modal) {
         modal.style.display = "none";
       }
     }
+
+    function openModal(title, description, imageSrc) {
+  document.getElementById("modal-title").innerText = title;
+  document.getElementById("modal-description").innerText = description;
+  document.getElementById("modal-image").src = imageSrc;
+  document.getElementById("modal").style.display = "flex";
+}
+
   </script>
 </body>
+
 </html>

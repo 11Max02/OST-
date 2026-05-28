@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch the Ball Game</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    #gameArea {
+      position: relative;
+      width: 400px;
+      height: 500px;
+      background: #222;
+      border: 3px solid #555;
+      overflow: hidden;
+    }
+
+    #paddle {
+      position: absolute;
+      bottom: 10px;
+      left: 160px;
+      width: 80px;
+      height: 15px;
+      background: #4CAF50;
+      border-radius: 5px;
+    }
+
+    #ball {
+      position: absolute;
+      top: 0;
+      left: 200px;
+      width: 20px;
+      height: 20px;
+      background: #FF5722;
+      border-radius: 50%;
+    }
+
+    #score {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="gameArea">
+      <div id="paddle"></div>
+      <div id="ball"></div>
+    </div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <script>
+    const paddle = document.getElementById("paddle");
+    const ball = document.getElementById("ball");
+    const scoreDisplay = document.getElementById("score");
+    const gameArea = document.getElementById("gameArea");
+
+    let score = 0;
+    let ballSpeed = 2;
+    let ballY = 0;
+    let ballX = Math.random() * (gameArea.offsetWidth - 20);
+
+    // Move paddle with arrow keys
+    document.addEventListener("keydown", (e) => {
+      const paddleLeft = paddle.offsetLeft;
+      if (e.key === "ArrowLeft" && paddleLeft > 0) {
+        paddle.style.left = paddleLeft - 20 + "px";
+      }
+      if (e.key === "ArrowRight" && paddleLeft < gameArea.offsetWidth - paddle.offsetWidth) {
+        paddle.style.left = paddleLeft + 20 + "px";
+      }
+    });
+
+    function resetBall() {
+      ballY = 0;
+      ballX = Math.random() * (gameArea.offsetWidth - 20);
+      ball.style.left = ballX + "px";
+    }
+
+    function gameLoop() {
+      ballY += ballSpeed;
+      ball.style.top = ballY + "px";
+
+      // Check if ball hits paddle
+      if (
+        ballY + 20 >= paddle.offsetTop &&
+        ballX + 20 >= paddle.offsetLeft &&
+        ballX <= paddle.offsetLeft + paddle.offsetWidth
+      ) {
+        score++;
+        scoreDisplay.textContent = "Score: " + score;
+        resetBall();
+      }
+
+      // Reset if ball falls out
+      if (ballY > gameArea.offsetHeight) {
+        score = 0;
+        scoreDisplay.textContent = "Score: " + score;
+        resetBall();
+      }
+
+      requestAnimationFrame(gameLoop);
+    }
+
+    resetBall();
+    gameLoop();
+  </script>
+</body>
+</html>
