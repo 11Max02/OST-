@@ -180,15 +180,17 @@
         </div>
 
         <div class="card"
-          onclick="openModal('Project Two', 'This is the second project description.', 'images/project2.png')">
-          <img src="images/project2.png" alt="Project Two"
+          onclick="openModal('Valentines Promo', 'Heart donuts promo poster ', 'images/Valentines-Promo.png')">
+          <img src="images/Valentines-Promo.png" alt="Valentines Promo"
             style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
         </div>
 
-        <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">Project Two
+        <div class="card"
+          onclick="openModal('Maxtreat logo', 'this logo made for street foods ', 'images/logo.png')">
+          <img src="images/logo.png" alt="Maxtreat logo"
+            style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
         </div>
-        <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">Project Three
-        </div>
+
         <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">Project Four
         </div>
 
@@ -198,10 +200,19 @@
           <img src="images/catch-ball.png" alt="Catch the Ball"
             style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
         </div>
-        <div class="card" onclick="openModal('Project Two', 'This is the second project description.')">Project Two
+
+        <div class="card"
+          onclick="openModal('Valentines Promo', 'Heart donuts promo poster ', 'images/Valentines-Promo.png')">
+          <img src="images/Valentines-Promo.png" alt="Valentines Promo"
+            style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
         </div>
-        <div class="card" onclick="openModal('Project Three', 'This is the third project description.')">Project Three
+
+        <div class="card"
+          onclick="openModal('Maxtreat logo', 'this logo i made was for may own business in the future', 'images/logo.png')">
+          <img src="images/logo.png" alt="Maxtreat logo"
+            style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
         </div>
+
         <div class="card" onclick="openModal('Project Four', 'This is the fourth project description.')">Project Four
         </div>
       </div>
@@ -240,11 +251,11 @@
     }
 
     function openModal(title, description, imageSrc) {
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal-description").innerText = description;
-  document.getElementById("modal-image").src = imageSrc;
-  document.getElementById("modal").style.display = "flex";
-}
+      document.getElementById("modal-title").innerText = title;
+      document.getElementById("modal-description").innerText = description;
+      document.getElementById("modal-image").src = imageSrc;
+      document.getElementById("modal").style.display = "flex";
+    }
 
   </script>
 </body>
