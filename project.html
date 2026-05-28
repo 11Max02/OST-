@@ -76,6 +76,7 @@
     .navbar a.active {
       border-color: #fff;
     }
+
     h1 {
       font-size: 100px;
       font-weight: 200;
@@ -161,6 +162,51 @@
       font-size: 24px;
       cursor: pointer;
     }
+
+    .logo-carousel {
+      width: 100%;
+      overflow: hidden;
+      background: #0b0e14;
+      padding: 30px 0;
+    }
+
+    .logo-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-right 25s linear infinite;
+    }
+
+    .logo {
+      flex: 0 0 auto;
+      margin: 0 25px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Infinite scroll keyframes (left → right) */
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Pause on hover */
+    .logo-carousel:hover .logo-track {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 
@@ -172,7 +218,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="project.html" class="active">Project</a>
-        <a href="">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
     <h1>MY PROJECTS</h1>
@@ -229,6 +275,27 @@
         </div>
 
       </div>
+
+      <section class="logo-carousel">
+        <div class="logo-track">
+          <!-- Original logos -->
+          <div class="logo"><img src="images/canva.jpg" alt="Logo 1"></div>
+          <div class="logo"><img src="images/css.jpg" alt="Logo 2"></div>
+          <div class="logo"><img src="images/html.jpg" alt="Logo 3"></div>
+          <div class="logo"><img src="images/java.jpg" alt="Logo 4"></div>
+          <div class="logo"><img src="images/ps.jpg" alt="Logo 5"></div>
+          <div class="logo"><img src="images/pics.jpg" alt="Logo 5"></div>
+
+          <!-- Duplicate logos for seamless loop -->
+          <div class="logo"><img src="images/canva.jpg" alt="Logo 1"></div>
+          <div class="logo"><img src="images/css.jpg" alt="Logo 2"></div>
+          <div class="logo"><img src="images/html.jpg" alt="Logo 3"></div>
+          <div class="logo"><img src="images/java.jpg" alt="Logo 4"></div>
+          <div class="logo"><img src="images/ps.jpg" alt="Logo 5"></div>
+          <div class="logo"><img src="images/pics.jpg" alt="Logo 5"></div>
+        </div>
+      </section>
+
     </section>
 
     <!-- Popup Modal -->

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACAS | Personal Website</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+          height: 100vh;
+          background-color: #0b0e14; 
+          background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+          padding: 50px 5%;
+        }
+
+        .container {
+          position: relative;
+          min-height: 100%;
+          background-color: #0b0e14; 
+          background-image: radial-gradient(circle at center 20%, #1a2c5a 0%, #0b0e14 70%);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+          border-radius: 30px; 
+          backdrop-filter: blur(30px);
+          transform: scale(0);
+          animation: zoom-in 1s ease forwards;
+          padding-top: 120px; /* space for header */
+        }
+
+        @keyframes zoom-in {
+          100% { transform: scale(1); }
+        }
+
+        header {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 25px 5%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 100;
+        }
+
+        .logo {
+          font-size: 25px;
+          color: #fff;
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+        .navbar a {
+          font-size: 18px;
+          color: #fff;
+          text-decoration: none;
+          font-weight: 500;
+          margin-left: 35px;
+          border-bottom: 2px solid transparent;
+          transition: .5s;
+        }
+
+        .navbar a:hover, 
+        .navbar a.active {
+          border-color: #fff;
+        }
+
+        /* Contact section */
+        .contact {
+          text-align: center;
+          padding: 60px 20px;
+          max-width: 800px;
+          margin: 0 auto;
+          background: rgba(26,44,90,0.6);
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .contact h2 {
+          font-size: 2rem;
+          margin-bottom: 15px;
+          color: #4db8ff;
+        }
+
+        .contact p {
+          font-size: 1.1rem;
+          margin-bottom: 30px;
+          color: #ccc;
+        }
+
+        .contact-links {
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+          flex-wrap: wrap;
+        }
+
+        .contact-item {
+          background: #1a2c5a;
+          color: #fff;
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+          background: #4db8ff;
+          transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <header>
+        <a href="index.html" class="logo">MR</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact" id="contact">
+      <h2>📬 Contact Me</h2>
+      <p>Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+      
+      <div class="contact-links">
+        <a href="mailto:reymar.macas@cvsu.edu.ph" class="contact-item">📧 reymar.macas@cvsu.edu.ph</a>
+        <a href="https://github.com/11Max02" target="_blank" class="contact-item">🐙 GitHub Profile</a>
+        <a href="https://www.facebook.com/macas.reymar/" target="_blank" class="contact-item">📘Facebook </a>
+      </div>
+    </section>
+   </div>
+</body>
+</html>
